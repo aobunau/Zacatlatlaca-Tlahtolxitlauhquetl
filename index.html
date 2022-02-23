@@ -49,14 +49,13 @@
 </ul>
     </div>
     <script>
-        async function getWordList() {
-    const response = fetch('wordlist.json');
-    const data = response.json();
+fetch("./wordlist.json")
+    .then(function(response) {
+        return response.json();
+})
+.then(function(data) {
     console.log(data);
-    console.log("a");
-}
-
-getWordList();
+});
     </script>
 </body>
 </html>
