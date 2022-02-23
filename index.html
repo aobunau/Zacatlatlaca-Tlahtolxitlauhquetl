@@ -8,16 +8,6 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        async function getWordList() {
-    const response = fetch('wordlist.json');
-    const data = response.json();
-    console.log(data);
-    console.log("a");
-}
-
-getWordList();
-    </script>
     <div class="wrapper">
         <header>~Zacatlatlaca Tlahtolxitlauhquetl~</header>
         <div id="search">
@@ -58,5 +48,15 @@ getWordList();
     </div>
 </ul>
     </div>
+    <script>
+        async function getWordList() {
+    const response = fetch('wordlist.json');
+    const data = response.json();
+    console.log(data);
+    console.log("a");
+}
+
+getWordList();
+    </script>
 </body>
 </html>
