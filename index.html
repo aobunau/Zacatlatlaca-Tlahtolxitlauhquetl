@@ -8,35 +8,53 @@
     <title>Document</title>
 </head>
 <body>
+    <script>
+        async function getWordList() {
+    const response = fetch('wordlist.json');
+    const data = await response.json();
+    console.log(data);
+    console.log("a");
+}
+
+getWordList();
+    </script>
     <div class="wrapper">
         <header>~Zacatlatlaca Tlahtolxitlauhquetl~</header>
-        <div class="search">
-            <input type="text" placeholder="Type here">
+        <div id="search">
+            <input type="text" placeholder="Type here" required>
             <i class="material-icons">search</i>
             <span class="material-icons">close</span>
         </div>
-<ul>
-    <li class="word">
-        <div class="details">
-        <p>zacatlatlaca</p>
-        <span>noun /zaqatɬatɬaqa/</span>
+<ul id="wordlist">
+    <div class="word">
+        <li class="wordheader">
+            <div class="details">
+            <p>zacatlatlaca</p>
+            <span>noun /zaqatɬatɬaqa/</span>
+            </div>
+        </li>
+        <div class="content">
+            <li class="origin">
+                <div class="details">
+                    <p>Origin</p>
+                    <span>Nahuatl "zacatla" (open fields) + "tlaca" (people of).</span>
+                </div>
+            </li>
+            <li class="translation">
+                <div class="details">
+                <p>English Translation</p>
+                <span>a person born in Zacatlatlacatlan</span>
+                </div>
+            </li>
+            <li class="synonyms">
+                <div class="details">
+                <p>Synonyms</p>
+                <div class="list">
+                    <span>[none]</span>
+                </div>
+                </div>
+            </li>
         </div>
-    </li>
-    <div class="content">
-        <li class="translation">
-            <div class="details">
-            <p>English Translation</p>
-            <span>a person born in Zacatlatlacatlan</span>
-            </div>
-        </li>
-        <li class="synonyms">
-            <div class="details">
-            <p>Synonyms</p>
-            <div class="list">
-                <span>[a person born in Zacatlatlacatlan]</span>
-            </div>
-            </div>
-        </li>
     </div>
 </ul>
     </div>
