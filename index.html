@@ -11,7 +11,7 @@
     <script>
         async function getWordList() {
     const response = fetch('wordlist.json');
-    const data = await response.json();
+    const data = response.json();
     console.log(data);
     console.log("a");
 }
